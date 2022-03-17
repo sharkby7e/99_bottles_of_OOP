@@ -9,10 +9,14 @@ def bottles(num)
     puts "ﱘ  No more bottles of beer on the wall :("
     return
   end
+  
   puts "ﱘ  #{num} bottles of beer on the wall" 
   puts "ﱘ  #{num} bottles of beer"
   puts "ﱘ  Take one down, pass it around"
+  
+  #recursive call
   bottles(num-1)
+  
 end
 
 bottles(ARGV[0].to_i)
