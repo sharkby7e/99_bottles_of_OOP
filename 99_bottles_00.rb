@@ -5,18 +5,29 @@
 
 def bottles(num)
   # base case (num)ber of beers left, returns when 0
-  if num<1 
-    puts "ﱘ  No more bottles of beer on the wall :("
+  if num<2
+    puts "#{num} bottle of beer on the wall"
+    puts "#{num} bottle of beer"
+    puts "Take one down, pass it around"
+    puts "No More Bottles of Beer on the wall :("
+    puts ""
     return
+  elsif num<3
+    puts "#{num} bottles of beer on the wall"
+    puts "#{num} bottles of beer"
+    puts "Take one down, pass it around"
+    puts "#{num-1} bottle of beer on the wall"
+    puts ""
+  else
+  puts "#{num} bottles of beer on the wall" 
+  puts "#{num} bottles of beer"
+  puts "Take one down, pass it around"
+  puts "#{num-1} bottles of beer on the wall"
+  puts ""
   end
-  
-  puts "ﱘ  #{num} bottles of beer on the wall" 
-  puts "ﱘ  #{num} bottles of beer"
-  puts "ﱘ  Take one down, pass it around"
-  
+
   #recursive call
   bottles(num-1)
-  
-end
+end   
 
 bottles(ARGV[0].to_i)
